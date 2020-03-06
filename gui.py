@@ -1,6 +1,8 @@
-import PyQt5 as qt
+import sys
+from PyQt5.QtCore import *
+from PyQt5.QtWidgets import *
 
-class MainUI(qt.QMainWindow):
+class MainUI(QMainWindow):
 
     # __init__: creates the window and initializes variables
     # ARGS: self (QMainWindow)
@@ -15,7 +17,7 @@ class MainUI(qt.QMainWindow):
         # Menu bar
 
         # Central Widget
-        centralWidget = qt.QWidget()
+        centralWidget = QWidget()
         self.setCentralWidget(centralWidget)
         
         # Final setup
