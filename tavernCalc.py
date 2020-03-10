@@ -1,6 +1,6 @@
 # Dan Bachler
 # tavernCalc.py
-# A simple application for calculating tavern profits in Dungeons and Dragons Editions 3.5 and 5
+# A "simple" application for calculating tavern profits in Dungeons and Dragons Editions 3.5 and 5
 
 from PyQt5.QtWidgets import QApplication
 import gui
