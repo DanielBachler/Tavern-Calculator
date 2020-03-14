@@ -12,7 +12,7 @@ Currently to use the program it must be run from command line with all proper li
 
 Future plans are to have the program frozen to an executable state that does not require having python installed.
 
-Once the program is launched you will have to select you rule set file, using the file menu on the application then load the tavern you wish to do calculations for.  Hit the update button to randomly select an event and recalculate the values for the tavern. 
+Once the program is launched you will have to select your rule set file, using the file menu on the application then load the tavern you wish to do calculations for.  Hit the update button to randomly select an event and recalculate the values for the tavern. 
 
 To save a tavern there is an option in the file menu that allows for saving the tavern to a file.
 
@@ -29,3 +29,7 @@ With a  `*` for a special even that repeats in the opening parentheses.
 EX:
 
 `06 Local Corrupt official black mails inn (*-50% Income This event continues every month till the Corrupt Official is dealt with)`
+
+# Custom Rule Set Formats
+
+If you want to have a different format for the rule set file, all you have to do is edit the fileParser.py file's FileParser object.  You can change keywords for events, and modify application status e.g. "monthly".

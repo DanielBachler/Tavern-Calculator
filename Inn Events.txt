@@ -1,4 +1,4 @@
-01 Major Fire, Inn is burned to its foundation and must be rebuilt from scratch (-100%, stock, -100% popularity)
+01 Major Fire, Inn is burned to its foundation and must be rebuilt from scratch (-100% stock, -100% popularity)
 02 Land at a premium, property value of the land the inn is on (increase rent/tax by 10% permanently)
 03 Instability in foundation (Increase Upkeep 10% permanently)
 04 Difficultly in trade negotiations (Increase Stock cost by 10% permanently)

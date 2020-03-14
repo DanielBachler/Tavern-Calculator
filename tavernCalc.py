@@ -5,6 +5,8 @@
 from PyQt5.QtWidgets import QApplication
 import gui
 import sys
+# TEST
+import fileParser
 
 app = None
 
@@ -16,4 +18,11 @@ def main():
 
     sys.exit(app.exec_())
 
-main()
+def test():
+    test_file = ['C:/Users/Daniel/Documents/GitHub/Tavern-Calculator/Inn Events.txt']
+    fp = fileParser.FileParser()
+    test = fp.parseRuleSetFile(test_file)
+    print(test)
+
+#main()
+test()
