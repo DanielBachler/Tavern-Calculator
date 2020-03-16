@@ -5,6 +5,7 @@
 # By splitting out the file parser for tavern rule sets anyone can rewrite the parser to meet the needs of their file
 
 import object
+import re
 
 class FileParser:
 
@@ -68,32 +69,34 @@ class FileParser:
     # RETURNS: ? (object.RuleSet)
     def command_parser(self, cmd_list):
         ruleset = object.RuleSet()
-        print(cmd_list)
         for command in cmd_list:
-            
+            # Get modifier from string
+            modifier = self.getMultiplier(command)
+
             ## Branching logic for determining effect
 
-            # Check if lose all
+            # Check if lose all (may need to be an additional check)
             if self.keywords[0] in command:
+                # If all is lost for a command
                 pass
             # Check if rent or tax
             elif self.keywords[1] in command or self.keywords[2] in command:
-                pass
+                ruleset.rent += modifier
             # Check if upkeep
             elif self.keywords[3] in command:
-                pass
+                ruleset.upkeep += modifier
             # Check if stock
             elif self.keywords[4] in command:
-                pass
+                ruleset.stock += modifier
             # Check if employee pay
             elif self.keywords[5] in command:
-                pass
+                ruleset.pay += modifier
             # Check if income
             elif self.keywords[6] in command:
-                pass
+                ruleset.income += modifier
             # Check if popularity
             elif self.keywords[6] in command:
-                pass
+                ruleset.popularity += modifier
 
             ## Branching logic to determine if single application or repeating
 
@@ -112,4 +115,9 @@ class FileParser:
     # ARGS: command (String)
     # RETURNS: multiplier (float)
     def getMultiplier(self, command):
-        pass
+        valueOb = re.search("-*\d+", command)
+        value =  int(valueOb.group())
+        if "%" in command:
+            return value / 100
+        else:
+            return value
